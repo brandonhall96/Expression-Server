@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "expression-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonhall96/Expression-Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonhall96/Expression-Server/issues"
+  },
+  "homepage": "https://github.com/brandonhall96/Expression-Server#readme",
+  "description": ""
 }
