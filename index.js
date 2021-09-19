@@ -8,6 +8,13 @@ const bodyParser = require('body-parser')
 app.get('/test', (req, res) => {
 res.send('Welcome to the backend!')
 })
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+ 
+    next();
+  });
+
 //Set the port that you want the server to run on
 const port = process.env.PORT || 8080;
 app.listen(port);
