@@ -1,6 +1,8 @@
 const express = require('express');
-const path = require('path');
+require('dotenv').config();
 const app = express();
+const site = require('./api/site')
+const bodyParser = require('body-parser')
 // a test route to make sure we can reach the backend
 //this would normally go in a routes file
 app.get('/test', (req, res) => {
@@ -10,3 +12,11 @@ res.send('Welcome to the backend!')
 const port = process.env.PORT || 8080;
 app.listen(port);
 console.log('App is listening on port ' + port);
+
+app.use(bodyParser.json())
+// Home route
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Smile, you are being watched by the Backend Engineering Team' });
+});
+
+app.use('/api/site', site);
