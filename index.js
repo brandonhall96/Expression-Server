@@ -25,7 +25,7 @@ app.use(bodyParser.json())
 
 // Home route
 app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Smile, you are being watched by the Backend Engineering Team' });
+    res.status(200).json({ message: 'Smile, you are being watched by the Backend' });
 });
 
 app.use('/api/site', site);

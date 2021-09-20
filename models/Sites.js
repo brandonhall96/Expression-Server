@@ -17,7 +17,11 @@ const siteSchema = new Schema({
     },
     siteNumber: { 
         type: Number,
+    },
+    nights: {
+        type: Number
     }
+
 });
 
 const Site = mongoose.model('Site', siteSchema);
